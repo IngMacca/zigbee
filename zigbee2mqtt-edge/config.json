@@ -95,7 +95,7 @@
     "serial": {
       "port": "str",
       "disable_led": "bool?",
-      "adapter": "match(zstack|deconz|zigate|ezsp)?"
+      "adapter": "match(^zstack|deconz|zigate|ezsp$)?"
     },
     "blocklist": [
       "str?"
@@ -113,7 +113,6 @@
       "log_level": "match(^info|debug|warn|error$)?",
       "log_directory": "str?",
       "log_file": "str?",
-      "log_output": ["list(console|file|syslog)?"],
       "log_rotation": "bool?",
       "timestamp_format": "str?",
       "baudrate": "int?",
@@ -138,16 +137,13 @@
       "homeassistant_discovery_topic": "str?",
       "homeassistant_status_topic": "str?",
       "homeassistant_legacy_triggers": "bool?",
-      "homeassistant_legacy_entity_attributes": "bool?",
       "ikea_ota_use_test_url": "bool?",
       "legacy_api": "bool?"
     },
     "device_options": {
       "occupancy_timeout": "int?",
       "temperature_precision": "int?",
-      "humidity_precision": "int?",
-      "legacy": "bool?",
-      "retain": "bool?"
+      "legacy": "bool?"
     },
     "device_options_string": "str?",
     "queue": {
@@ -156,10 +152,8 @@
     },
     "experimental": {
       "transmit_power": "int?",
-      "output": "str?",
-      "availability_new": "bool?"
+      "output": "str?"
     },
-    "availability": "bool?",
     "frontend": {
       "host": "str?",
       "port": "int?"
